@@ -17,9 +17,11 @@ class Emission < Broadcast
         return @structure[0].asset.retrieval_uri.to_s + " (e)"
     end
 
-    def url=(x, idx=0)
+    def url=(x, idx=0, deliver=true)
         return nil if @live
         @structure[idx].asset.url = x
+        
+        deliver(idx) if deliver
         return 1
     end
 

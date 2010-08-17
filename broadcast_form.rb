@@ -71,6 +71,7 @@ class BCStructure < Qt::AbstractItemModel
         end
         return 
     end
+
 end
 
 class BroadcastForm < Qt::Widget

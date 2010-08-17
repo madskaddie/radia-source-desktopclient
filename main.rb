@@ -10,10 +10,44 @@ def fetch()
     Middleware.fetch.map {|x| Broadcast.load_ar(x)}
 end
 
+module Ui
+    class Main < Qt::MainWindow
+        def initialize(debug=nil)
+            super
+            @base = MainWindow.new
+            @base.setupUi self
+            config
+            show
+        end
+
+        def config
+
+            fsm = Qt::FileSystemModel.new(self)
+            fsm.rootPath = Qt::Dir.current_path
+            @base.file_manager.model = fsm
+            @base.file_manager.CurrentIndex = fsm.index Qt::Dir.current_path
+
+            schedule =  SchedulerListModel.new(fetch, self)
+            @base.scheduler_list.model = schedule
+            connect(@base.scheduler_list, SIGNAL('doubleClicked(QModelIndex)'), schedule, SLOT('run_edit_form(QModelIndex)'))
+            
+        end
+    end
+end
+
+
+if $0.eql? __FILE__
+    a = Qt::Application.new(ARGV) 
+
+    Ui::Main.new()
+    a.exec()
+end
+
+exit 0
+
 class  MainWindow < Qt::MainWindow
-    def initialize(debug=nil)
+    def initialize()
         super()
-        window_title = "RS Local client"
 
         Qt.debug_level = Qt::DebugLevel::High if debug
 
@@ -64,11 +98,5 @@ end
 
 
 
-if $0.eql?__FILE__
-    Qt::Application.new(ARGV) do
-        window = MainWindow.new()
-        exec()
-    end
-end
 
 exit 0

@@ -13,5 +13,6 @@ APP_DIR = File.dirname(File.expand_path(__FILE__))
 Dir[File.join(APP_DIR, "/scheduler/*.rb")].sort.each { |z| require z }
 
 require 'scheduler_widget'
+require 'scheduler_listmodel'
 require 'broadcast_form'
 require 'main_ui'

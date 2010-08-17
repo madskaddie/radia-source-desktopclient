@@ -16,14 +16,7 @@ class Single < AudioAsset
     end
 
     def url=(uri)
-        begin
-            single = Middleware::fetch_single @id
-            single.retrieval_uri = uri
-            single.authored = true
-            single.save
-            @retrieval_uri = uri
-        end
-        return @retrieval_uri
+        @retrieval_uri = uri
     end
 
     def [](x)

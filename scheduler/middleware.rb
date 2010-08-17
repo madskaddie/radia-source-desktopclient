@@ -4,7 +4,6 @@ module Middleware
     require 'active_resource'
 
     def self.fetch
-        puts 1
         bcs = Schedule::find(:one, :from => '/schedule.xml').broadcasts
         return bcs
     end
