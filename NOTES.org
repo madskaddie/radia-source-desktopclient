@@ -1,6 +1,4 @@
 RadiaSource Local Client
-
-
 * Objectivo
   Criar um cliente simples para operações CRUD sobre os metadados dos
   broadcasts.
@@ -10,10 +8,27 @@ RadiaSource Local Client
   estes dados de forma automatica e o processo web based é muito lento
   e pouco produtivo.
 
-
+* INSTALL
+** Dependencies
+   - Ruby Qt bindings:
+     - apt-get install libqt4-ruby
+     - apt-get install rails or gem install activeresource
+   - ActiveResource
+** run main.rb
 * Colour Codes ( http://www.colourlovers.com/palette/1242240/Titus_Andronicus ):
  - 35211A
  - 5F4A47
  - E4D8C2
  - CC5C5B
  - 961915
+* TODOs:
+** TODO [#A] Pseudo Asynchronous jobs 
+** TODO [#B] Pimp the List
+** TODO [#B] New, simpler, file system model
+   - List based file system
+   - Support for file format filters
+** TODO [#C] Broadcast form [0/0]
+*** TODO Filesystem widget
+*** TODO Drag & Drop
+** TODO [#C] Close buttons
+
