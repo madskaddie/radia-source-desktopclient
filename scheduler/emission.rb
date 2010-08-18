@@ -34,4 +34,8 @@ class Emission < Broadcast
         return if @live
         return @structure.select {|x| x.asset.delivered}.length.eql?(@structure.length)
     end
+
+    def live?
+        return @live
+    end
 end

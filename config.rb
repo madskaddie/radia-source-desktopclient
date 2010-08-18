@@ -6,6 +6,8 @@ require 'active_resource'
 
 
 $config = {:scheduler_uri => "http://zaki:1234@welles.ist.utl.pt:3000"}
+$colors = {:live =>"#961915", :recorded =>  "#CC5C5B", 
+    :repetition =>"#E4D8C2", :gap => "#5F4A47"}
 
 APP_DIR = File.dirname(File.expand_path(__FILE__))
 

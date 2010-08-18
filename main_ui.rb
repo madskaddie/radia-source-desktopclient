@@ -1,7 +1,7 @@
 =begin
 ** Form generated from reading ui file 'main.ui'
 **
-** Created: Mon Aug 16 21:21:21 2010
+** Created: Wed Aug 18 01:56:02 2010
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -58,6 +58,12 @@ class Ui_MainWindow
     @sizePolicy1.heightForWidth = @scheduler_list.sizePolicy.hasHeightForWidth
     @scheduler_list.sizePolicy = @sizePolicy1
     @scheduler_list.acceptDrops = true
+    @scheduler_list.styleSheet = "QListView::item {\n" \
+"  border-style: solid;\n" \
+"  border-width: 1px;\n" \
+"  border-radius: 4px;\n" \
+"  border-color: #111;\n" \
+"}"
     @scheduler_list.dragEnabled = true
     @scheduler_list.dragDropMode = Qt::AbstractItemView::DropOnly
     @scheduler_list.defaultDropAction = Qt::LinkAction
@@ -85,7 +91,7 @@ class Ui_MainWindow
     @toolBox.objectName = "toolBox"
     @page = Qt::Widget.new()
     @page.objectName = "page"
-    @page.geometry = Qt::Rect.new(0, 0, 298, 223)
+    @page.geometry = Qt::Rect.new(0, 0, 274, 223)
     @verticalLayout_2 = Qt::VBoxLayout.new(@page)
     @verticalLayout_2.objectName = "verticalLayout_2"
     @file_manager = Qt::TreeView.new(@page)
