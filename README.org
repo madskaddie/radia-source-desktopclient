@@ -1,29 +1,34 @@
 RadiaSource Local Client
-* Objectivo
-  Criar um cliente simples para operações CRUD sobre os metadados dos
-  broadcasts.
-* Motivação
-  Preciso de fazer debugging ao playout. Para tal preciso que o
-  scheduler tenha todos os dados necessários. Não é possivel alimentar
-  estes dados de forma automatica e o processo web based é muito lento
-  e pouco produtivo.
-
+* Goal
+  Create a simple client for the CRUD operations of the broadcast
+  metadata
+* Motivation
+  We need to debug the playout module. In order to do that, the
+  scheduler information must be fed. Web methods suck because their
+  are slow for updating big batches of information.
 * INSTALL
 ** Dependencies
    - Ruby Qt bindings:
      - apt-get install libqt4-ruby
      - apt-get install rails or gem install activeresource
    - ActiveResource
+** edit config.rb
 ** run main.rb
-* Colour Codes ( http://www.colourlovers.com/palette/1242240/Titus_Andronicus ):
+* Colour Codes
+** Source
+   http://www.colourlovers.com/palette/1242240/Titus_Andronicus
+** Codes
  - 35211A
  - 5F4A47
  - E4D8C2
  - CC5C5B
  - 961915
 * TODOs:
-** TODO [#A] Pseudo Asynchronous jobs 
-** TODO [#B] Pimp the List
+** TODO [#A] Pseudo Asynchronous jobs [1/2]
+*** DONE Loading
+*** TODO Remote Updates 
+** TODO [#B] Status & Progress Bar stuff
+** DONE [#B] Pimp the List
 ** TODO [#B] New, simpler, file system model
    - List based file system
    - Support for file format filters
@@ -31,4 +36,5 @@ RadiaSource Local Client
 *** TODO Filesystem widget
 *** TODO Drag & Drop
 ** TODO [#C] Close buttons
+** TODO Calendar navigation
 
